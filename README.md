@@ -7,7 +7,7 @@ A minimalistic to-do app to keep track of tasks. Features include:
 - Edit a to-do
 - Clear to-do list
 
---- [Live Website]() ---
+--- [Live Website](https://sensational-alpaca-b9902b.netlify.app/) ---
 
 ![To-Do App Screenshot](./Images/screenshot.png "To-Do App")
 
