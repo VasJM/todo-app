@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+
+    <!-- Flaticon CDN for Interface Icons -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- To Do Input -->
+    <form action="" class="todo-form">
+        <input type="text" name="input" id="todo-input" aria-label="input" aria-description="Input field for new To-Do list item">
+        <button type="submit" class="add-btn"><i class="fi fi-br-plus"></i></button>
+    </form>
+
+    <!-- To Do List -->
+    <div class="todo-list-container">
+        <ul class="todo-list">
+            <!-- Dummy Items -->
+            <div class="todo-item-container">
+                <button class="check-btn"><i class="fi fi-br-check"></i></button>
+                <button class="cross-btn"><i class="fi fi-br-cross"></i></button>
+                <button class="edit-btn"><i class="fi fi-br-pen-clip"></i></button>
+                <li class="todo-item">Walk the dogs at the park</li>
+            </div>
+            <div class="todo-item-container">
+                <button class="check-btn"><i class="fi fi-br-check"></i></button>
+                <button class="cross-btn"><i class="fi fi-br-cross"></i></button>
+                <button class="edit-btn"><i class="fi fi-br-pen-clip"></i></button>
+                <li class="todo-item">Water plants</li>
+            </div>
+            <div class="todo-item-container">
+                <button class="check-btn"><i class="fi fi-br-check"></i></button>
+                <button class="cross-btn"><i class="fi fi-br-cross"></i></button>
+                <button class="edit-btn"><i class="fi fi-br-pen-clip"></i></button>
+                <li class="todo-item">Do the laundry</li>
+            </div>
+            <!-- Dummy Items -->
+        </ul>
+    </div>
+
+    <div class="clear-list">
+        <button class="clear-list-btn" aria-label="Clear" aria-description="Button to clear the current To-Do list"><i class="fi fi-br-refresh"></i></button>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

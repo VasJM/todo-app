@@ -1,0 +1,230 @@
+/* ROOT VARIABLES */
+:root {
+    /* primary colours */
+    --primary-01-100: #E1DDF8;
+    --primary-01-200: #D2CCF5;
+    --primary-01-300: #C3BBF2;
+    --primary-02-100: #E5F2D0;
+    --primary-02-200: #D3E9AF;
+    --primary-03-100: #F56F51;
+    --primary-03-200: #F24E29;
+    --primary-04-100: #C6EDFA;
+    --primary-04-200: #B4E6F8;
+    --primary-05-100: #FEE2AE;
+    --primary-05-200: #FED486;
+
+    /* secondary colours */
+    --secondary-100: #FFF;
+    --secondary-900: #44355B;
+
+    /* font properties */
+    --font-family: 'Comfortaa', sans-serif;
+    --font-size: 1rem;
+    --fw-bold: 700;
+}
+
+/* CSS RESET */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+ul, ol, li {
+    list-style: none;
+}
+
+/* GENERAL STYLES */
+body {
+    background-image: url("./Images/dot-grid.webp");
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    font-weight: var(--fw-bold);
+    color: var(--secondary-900);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5em;
+
+    /* border: 0.2em solid var(--secondary-900); */
+}
+
+input {
+    width: 14em;
+    padding: 0.5em;
+    padding-left: 1em;
+    font-size: 1.2rem;
+    background-color: var(--primary-01-100);
+    border: 0.2rem solid var(--secondary-900);
+    border-right: none;
+    border-radius: 1em 0 0 1em;
+}
+
+input:focus {
+    outline: var(--secondary-100);
+}
+
+button {
+    border: none;
+    padding: 0.6em;
+    cursor: pointer;
+}
+
+i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary-900);
+    pointer-events: none;
+}
+
+/* BUTTON STYLES */
+.fi-br-plus {
+    color: var(--secondary-900);
+}
+
+.add-btn {
+    background-color: var(--primary-01-200);
+    border: 0.2rem solid var(--secondary-900);
+    border-left: none;
+    border-radius: 0 1.15em 1.15em 0;
+    padding: 1em;
+}
+
+.add-btn:hover {
+    background-color: var(--primary-01-300);
+}
+
+.check-btn {
+    background-color: var(--primary-02-100);
+}
+
+.check-btn:hover {
+    background-color: var(--primary-02-200);
+}
+
+.cross-btn {
+    background-color: var(--primary-03-100);
+}
+
+.cross-btn:hover {
+    background-color: var(--primary-03-200);
+}
+
+.edit-btn {
+    background-color: var(--primary-04-100);
+}
+
+.edit-btn:hover {
+    background-color: var(--primary-04-200);
+}
+
+.clear-list-btn {
+    font-size: 1.2rem;
+    background-color: var(--primary-05-100);
+    border: 0.2rem solid var(--secondary-900);
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+.clear-list-btn:hover {
+    background-color: var(--primary-05-200);
+}
+
+/* TO DO LIST STYLES */
+.todo-list-container {
+    padding: 0 2em 2em 2em;
+    overflow-y: scroll;
+    width: 22em;
+}
+
+.todo-list {
+    display: grid;
+    align-items: start;
+    gap: 0.5em;
+}
+
+/* TO DO ITEM STYLES */ 
+.todo-item-container {
+    display: flex;
+    background-color: var(--secondary-100);
+    border: 0.2rem solid var(--secondary-900);
+    border-radius: 1em;
+    overflow: hidden;
+}
+
+.todo-item {
+    font-size: 1.2rem;
+    align-self: center;
+    padding: 0.5em 1em;
+}
+
+/* CHECK STATE */
+.checked {
+    opacity: 0.5;
+}
+
+.strike {
+    text-decoration: line-through;
+}
+
+/* CLEAR LIST DIV STYLES */
+.clear-list {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 30em) {
+    input {
+        width: 20em;
+    }
+
+    .todo-list-container {
+        width: 25em;
+    }
+
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clear-list-btn {
+        font-size: 1.5rem;
+        border: 0.15em solid var(--secondary-900);
+    }
+}
