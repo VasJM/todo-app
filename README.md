@@ -1,5 +1,5 @@
 # To-Do App
-Welcome to my Virtual Keyboard Project!
+Welcome to my To-Do App Project!
 
 ## Table of Contents
 
